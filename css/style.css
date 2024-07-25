@@ -17,6 +17,13 @@ img[src$=".svg"]{
     filter: invert(1);
 }
 
+img[src$=".jpeg"]{
+    height: 50px;
+    width: 50px;
+    border-radius: 100%;
+    border: 1px solid white;
+}
+
 body{
     background-color: #EEEEEE;
 }
@@ -218,7 +225,7 @@ body{
 /* -----content----- */
 .content{
     display: grid;
-    grid-template: 1.5fr 1fr / 3fr 1fr ;
+    grid-template: 1fr 1fr / 3fr 1fr ;
     grid-template-areas: 
         "projects announcement"
         "projects trending";
