@@ -3,3 +3,24 @@ img[src$=".svg"]{
     height: 25px;
     width: 25px;
 }
+
+/* basic layout */
+.dashboard{
+    display: grid;
+    grid-template: 1fr 3fr/ 1fr 4fr;
+    grid-template-areas: 
+        "sidebar header"
+        "sidebar content";
+}
+
+.sidebar{
+    grid-area: sidebar;
+}
+
+.header{
+    grid-area: header;
+}
+
+.content{
+    grid-area: content;
+}
