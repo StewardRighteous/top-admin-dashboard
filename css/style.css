@@ -1,3 +1,15 @@
+/* font */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Playwrite+CU:wght@100..400&display=swap');
+
+
+/* colors */
+:root{
+    --main-color:rgb(32, 30, 67);
+    --main-color-2:rgb(19, 75, 112);
+    --secondary-color:rgb(80, 140, 155);
+    --secondary-color-2:rgb(256, 256, 256);
+}
+
 /* All SVG Sizes */
 img[src$=".svg"]{
     height: 25px;
@@ -11,6 +23,9 @@ img[src$=".svg"]{
     grid-template-areas: 
         "sidebar header"
         "sidebar content";
+    font-family: "Montserrat", monospace;
+    font-weight: normal;
+    font-size: normal;
 }
 
 .sidebar{
@@ -23,4 +38,60 @@ img[src$=".svg"]{
 
 .content{
     grid-area: content;
+}
+
+/* sidebar */
+.sidebar{
+    background-color:var(--main-color);
+    color:var(--secondary-color-2);
+    display: grid;
+    grid-template: 5rem calc(6*2.5rem) calc(3*2.5rem) / 1fr ;
+    gap:2rem;
+    justify-content: center;
+    align-items: center;
+}
+
+/* 3 sidebar sections */
+.dashboard-logo,
+.user-pages,
+.user-settings{
+    display: flex;
+    flex-flow: column nowrap;
+    margin: 2rem 2rem;
+    justify-content: space-around;
+    gap: 8px;
+}
+
+.dashboard-logo{
+    margin-top: 3rem;
+}
+
+/* individual sidebar elements */
+.sidebar .navigation{
+    display: grid;
+    grid-template-columns: 30px 1fr;
+    gap: 1rem;
+    align-items: center;
+    justify-content: center;
+}
+
+.navigation .logo img{
+    height:2rem ;
+    width:2rem ;
+    filter: invert(1);
+}
+
+.navigation .nav-location{
+    font-weight: 600;
+    font-size: 1.2rem;
+}
+
+.dashboard-logo .navigation img{
+    height: 2.5rem;
+    width: 2.5rem;
+}
+
+.dashboard-logo .navigation .nav-location {
+    font-weight: bold;
+    font-size: 2rem;
 }
