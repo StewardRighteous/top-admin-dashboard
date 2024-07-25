@@ -210,3 +210,27 @@ img[src$=".svg"]{
     background-color: var(--secondary-color-2);
     color: black;
 }
+
+/* -----content----- */
+.content{
+    display: grid;
+    grid-template: 1fr 1fr / 3fr 1fr ;
+    grid-template-areas: 
+        "projects announcement"
+        "projects trending";
+}
+
+.content .projects{
+    grid-area: projects;
+    margin-top: 1rem;
+    margin-left: 2rem;
+}
+
+.content .announcements{
+    grid-area: announcement;
+    margin-top: 1rem;
+}
+
+.content .trending{
+    grid-area: trending;
+}
