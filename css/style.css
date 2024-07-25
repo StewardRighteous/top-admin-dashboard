@@ -17,6 +17,10 @@ img[src$=".svg"]{
     filter: invert(1);
 }
 
+body{
+    background-color: #EEEEEE;
+}
+
 /* -----basic layout----- */
 .dashboard{
     display: grid;
@@ -218,6 +222,7 @@ img[src$=".svg"]{
     grid-template-areas: 
         "projects announcement"
         "projects trending";
+    gap: 2rem;
 }
 
 .content .projects{
@@ -233,4 +238,47 @@ img[src$=".svg"]{
 
 .content .trending{
     grid-area: trending;
+}
+
+/* projects */
+.projects{
+    display: grid;
+    grid-template: 3rem repeat(3, 15rem)/ repeat(auto-fit, minmax(25rem, 1fr));
+    gap: 20px;
+}
+
+.projects h1{
+    grid-column: 1/-1;
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+.projects .cards{
+    display: grid;
+    grid-template: 1fr 2fr 1fr/ 1fr;
+    padding: 1rem;
+    border-radius: 1rem;
+    background-color:var(--secondary-color-2);
+    box-shadow: 0px 3px 10px rgb(0, 0, 0, 0.60);
+    border-left: 1rem solid var(--main-color-2);
+    align-content: center;
+    align-items: center;
+}
+
+.projects .cards h1{
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.projects .cards p{
+    font-size: 1rem;
+    line-height: 1.2;
+    width: max(25ch, 40ch);
+}
+
+.projects .cards .icons{
+    filter: invert(1);
+    display: flex;
+    justify-content: flex-end;
+    gap: 20px;
 }
