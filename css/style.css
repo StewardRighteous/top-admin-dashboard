@@ -14,12 +14,13 @@
 img[src$=".svg"]{
     height: 25px;
     width: 25px;
+    filter: invert(1);
 }
 
-/* basic layout */
+/* -----basic layout----- */
 .dashboard{
     display: grid;
-    grid-template: 1fr 3fr/ 1fr 4fr;
+    grid-template: 9rem 3fr/ 0.7fr 4fr;
     grid-template-areas: 
         "sidebar header"
         "sidebar content";
@@ -40,7 +41,7 @@ img[src$=".svg"]{
     grid-area: content;
 }
 
-/* sidebar */
+/* -----sidebar----- */
 .sidebar{
     background-color:var(--main-color);
     color:var(--secondary-color-2);
@@ -78,7 +79,6 @@ img[src$=".svg"]{
 .navigation .logo img{
     height:2rem ;
     width:2rem ;
-    filter: invert(1);
 }
 
 .navigation .nav-location{
@@ -94,4 +94,119 @@ img[src$=".svg"]{
 .dashboard-logo .navigation .nav-location {
     font-weight: bold;
     font-size: 2rem;
+}
+
+/* -----header----- */
+.header{
+    display: grid;
+    grid-template: 2.8rem 4.8rem/ repeat(2, 1fr);
+    padding: 1rem;
+    background-color: var(--main-color-2);
+    box-shadow: 0px 9px 8px 0px rgb(0, 0, 0, 0.60);
+    align-items: center;
+}
+
+/* header sections */
+.header .searchbar,
+.header .user-details,
+.header .user-welcome-board,
+.header .buttons{
+    padding: 8px;
+}
+
+/* searchbar section */
+.searchbar label{
+    display: grid;
+    grid-template-columns: 2rem 1fr;
+    gap: 8px;
+}
+
+.searchbar label img{
+    height: 2rem;
+    width: 2rem;
+}
+
+.searchbar label input{
+    background-color: var(--secondary-color);
+    outline: 1px solid black;
+    border-radius: 8px;
+}
+
+.searchbar label input:focus{
+    background-color: var(--secondary-color-2);
+}
+
+/* username and notifications */
+.user-details{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: max(2px, 2rem);
+    
+}
+
+.user-details .notification img{
+    height: 1.5rem;
+    width: 1.5rem;
+}
+
+.user-details .logo img{
+    height: 2rem;
+    width: 2rem;
+}
+
+.user-details .user-name{
+    font-weight: bold;
+    color: var(--secondary-color-2);
+}
+
+/* user welcome */
+.user-welcome-board {
+    display: flex;
+    padding: 8px;
+    justify-content: flex-start;
+    gap: 2rem;
+}
+
+.user-welcome-board .logo img{
+    height: 3rem;
+    width: 3rem;
+}
+
+.user-welcome-board .username{
+    color: var(--secondary-color-2);
+}
+
+.user-welcome-board .username p{
+    font-weight: 400;
+    font-size: medium;
+}
+
+.user-welcome-board .username h1{
+    font-weight: 600;
+    font-size: large;
+}
+
+/* button section */
+.header .buttons{
+    display: flex;
+    justify-content: flex-end;
+    gap: 1rem;
+    
+}
+
+.header .buttons button{
+    height: 3.1rem;
+    width: 8rem;
+    border-radius: 1rem;
+    background-color: var(--secondary-color);
+    color: var(--secondary-color-2);
+    font-size: 1.2rem;
+    font-weight: bold;
+    padding: 8px;
+}
+
+.header .buttons button:hover{
+    background-color: var(--secondary-color-2);
+    color: black;
 }
