@@ -250,7 +250,7 @@ body{
 /* projects */
 .projects{
     display: grid;
-    grid-template: 3rem repeat(3, 15rem)/ repeat(auto-fit, minmax(25rem, 1fr));
+    grid-template: 3rem repeat(3, 15rem)/ repeat(auto-fit, minmax(30rem, 1fr));
     gap: 20px;
 }
 
@@ -289,6 +289,10 @@ body{
     display: flex;
     justify-content: flex-end;
     gap: 20px;
+}
+
+.projects .cards:hover{
+    box-shadow: 0px 7px 10px 10px var(--main-color-2);
 }
 
 /* announcements */
